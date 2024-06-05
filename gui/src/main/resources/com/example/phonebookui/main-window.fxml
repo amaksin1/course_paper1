@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.phonebookui.controllers.MainWindowController" prefWidth="800" prefHeight="600">
+    <HBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <!-- TableView with two columns -->
+        <TableView fx:id="tableView" prefWidth="600" prefHeight="500" minWidth="600" minHeight="500">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="225"/>
+                <TableColumn fx:id="phoneColumn" text="Phone Number" prefWidth="325"/>
+                <TableColumn fx:id="selColumn" text="Select" prefWidth="50"/>
+            </columns>
+        </TableView>
+
+        <!-- VBox for buttons -->
+        <VBox spacing="10" alignment="CENTER">
+            <Button text="Add" fx:id="addButton" onAction="#handleAddButtonAction" prefWidth="75" minWidth="75"/>
+            <Button text="Delete" fx:id="deleteButton" onAction="#handleDeleteButtonAction" prefWidth="75" minWidth="75"/>
+            <Button text="Edit" fx:id="editButton" onAction="#handleEditButtonAction" prefWidth="75" minWidth="75"/>
+            <Button text="Log out" fx:id="logoutButton" onAction="#handleLogoutButtonAction" prefWidth="75" minWidth="75"/>
+        </VBox>
+    </HBox>
+</AnchorPane>
